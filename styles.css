@@ -1,0 +1,253 @@
+:root {
+  --bg: #FAF8F5;
+  --surface: #FFFFFF;
+  --ink-900: #23201D;
+  --ink-700: #46423D;
+  --ink-500: #78736B;
+  --ink-300: #D5D0C7;
+  --coral-500: #FF6442;
+  --coral-soft: #FFF2ED;
+  --sage-700: #2F6040;
+  --sage-soft: #EEF5F0;
+  --radius-xl: 22px;
+  --radius-lg: 14px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink-900);
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(35, 32, 29, 0.08);
+}
+
+.topbar-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  text-decoration: none;
+  color: var(--ink-900);
+  font-weight: 800;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--coral-500);
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-700);
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+  background: var(--coral-soft);
+  color: var(--coral-500);
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 20px 72px;
+}
+
+.hero-card,
+.doc-card {
+  background: var(--surface);
+  border: 1px solid rgba(35, 32, 29, 0.08);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  box-shadow: 0 8px 28px rgba(35, 32, 29, 0.04);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  margin: 26px 0 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--ink-900);
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--ink-700);
+  font-size: 15px;
+}
+
+.meta-line {
+  font-size: 13px;
+  color: var(--ink-500);
+  margin-bottom: 16px;
+}
+
+.version-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: var(--bg);
+  border: 1px solid rgba(35, 32, 29, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+
+.version-bar label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-700);
+}
+
+.version-bar select {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-900);
+  background: #FFFFFF;
+  border: 1px solid var(--ink-300);
+  border-radius: 10px;
+  padding: 7px 12px;
+  cursor: pointer;
+}
+
+.summary-box {
+  background: var(--coral-soft);
+  border: 1px solid rgba(255, 100, 66, 0.22);
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 20px;
+}
+
+.summary-box strong {
+  display: block;
+  font-size: 13px;
+  color: var(--coral-500);
+  margin-bottom: 4px;
+}
+
+.summary-box p {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--ink-700);
+}
+
+.doc-body {
+  white-space: pre-wrap;
+  font-size: 14.5px;
+  line-height: 1.82;
+  color: var(--ink-700);
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.hub-link {
+  display: block;
+  text-decoration: none;
+  background: var(--bg);
+  border: 1px solid rgba(35, 32, 29, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  color: var(--ink-900);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.hub-link:hover {
+  transform: translateY(-2px);
+  border-color: var(--coral-500);
+}
+
+.hub-link h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.hub-link p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ink-500);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 9px;
+  border-radius: 999px;
+  background: var(--sage-soft);
+  color: var(--sage-700);
+  margin-bottom: 8px;
+}
+
+.step-list {
+  margin: 10px 0 18px;
+  padding-left: 20px;
+  color: var(--ink-700);
+  font-size: 14.5px;
+}
+
+.step-list li {
+  margin-bottom: 8px;
+}
+
+.footer {
+  max-width: 760px;
+  margin: 28px auto 0;
+  padding: 0 20px 36px;
+  font-size: 12.5px;
+  color: var(--ink-500);
+  text-align: center;
+}
